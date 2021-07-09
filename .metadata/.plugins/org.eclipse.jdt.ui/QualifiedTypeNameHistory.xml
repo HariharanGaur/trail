@@ -4,8 +4,8 @@
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
     <fullyQualifiedTypeName name="java.time.Instant"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
 </qualifiedTypeNameHistroy>
