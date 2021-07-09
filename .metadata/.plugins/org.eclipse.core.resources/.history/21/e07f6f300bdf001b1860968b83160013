@@ -1,0 +1,44 @@
+import java.util.*;
+public class Admin {
+	
+	private int custId;
+	private float balance;
+	
+	Admin(int custId,float balance){
+		this.custId=custId;
+		this.balance=balance;
+	}
+
+	public int getCustId() {
+		return custId;
+	}
+
+
+
+	public void setCustId(int custId) {
+		this.custId = custId;
+	}
+
+
+
+	public float getBalance() {
+		return balance;
+	}
+
+
+
+	public void setBalance(float balance) {
+		this.balance = balance;
+	}
+
+
+
+	public static void main(String[] args) {
+		ArrayList<Admin> cust=new ArrayList<>();
+		cust.add(new Admin(101,30000));
+		cust.add(new Admin(102,25000));
+		cust.add(new Admin(103,10000));
+		cust.add(new Admin(104,8000));
+	}
+
+}

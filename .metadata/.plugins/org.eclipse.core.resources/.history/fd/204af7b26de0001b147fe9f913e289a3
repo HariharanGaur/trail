@@ -1,0 +1,18 @@
+package maps;
+import java.util.*;
+import java.util.function.BiConsumer;
+
+public class Maps {
+
+	public static void main(String[] args) {
+		Hashtable<Integer,String> h=new Hashtable();
+		
+		h.put(10, "Hello");
+		h.put(20, "sur");
+		h.put(30, "morning");
+		
+		h.forEach((BiConsumer<? super Integer, ? super String>) h.keys());
+		System.out.println(h);
+	}
+
+}

@@ -1,0 +1,43 @@
+import java.util.*;
+import java.util.stream.Collectors;
+public class Streamss {
+	
+	int sid;
+	String scity;
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> arr=new ArrayList<>();
+		arr.add(10);
+		arr.add(50);
+		arr.add(21);
+		arr.add(17);
+		arr.add(45);
+		System.out.println(arr+"\n----------");
+		
+		arr.stream().sorted((i,j)->i-j).forEach(i->System.out.print(i+" "));
+		System.out.println("\n----------");
+		
+		List<Integer> divByFive=
+				 arr.stream().filter(n->n%5==0).collect(Collectors.toList());
+		
+		System.out.println("Divisible by 5 "+divByFive);
+
+	}
+
+}
+
+class A1{
+	int id;
+	String name;
+	A1(int id,String name){
+		this.id=id;
+		this.name=name;
+	}
+	
+	A1(Streamss s){
+		this.name=s.scity;
+		this.id=s.sid;
+		
+	}
+}

@@ -1,0 +1,47 @@
+package com.wiley.employee;
+
+import java.util.*;
+
+public class Employee {
+	int id;
+	String city;
+	Employee(int id,String city){
+		this.id=id;
+		this.city=city;
+	}
+	
+	public void WorkOnEmployee() {
+		List emp =  Arrays.asList(
+                new Employee(101,"Pune"),
+                new Employee(104,"Chennai"),
+                new Employee(103,"Delhi"),
+                new Employee(102,"Kolkatta"));
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class Sorted implements Comparator{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		Employee emp1=(Employee) o1;
+		Employee emp2=(Employee) o2;
+		int id1=emp1.id;
+		int id2=emp2.id;
+		if(id2>id1)
+			return 1;
+		else if(id2<id1)
+			return -1;
+		else {
+			String name2 = emp2.city;
+			String name1 = emp1.city;
+
+			return name2.compareTo(name1);
+		}
+		
+	}
+	
+}

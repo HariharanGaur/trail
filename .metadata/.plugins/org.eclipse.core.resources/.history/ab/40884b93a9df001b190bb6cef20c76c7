@@ -1,0 +1,23 @@
+import java.time.Instant;
+import java.util.*;
+public class sets {
+
+	public static void main(String[] args) {
+		Set ts=new TreeSet<>();
+		for(int i=0;i<100;i++)
+			ts.add(i);
+		
+		System.out.println("Sequential stream");
+		System.out.println(Instant.now());
+		ts.stream().forEach(System.out::println);
+		System.out.println(Instant.now());
+		
+		System.out.println("Parallel stream");
+		ts.parallelStream().sorted().forEach(System.out::println);
+		System.out.println(Instant.now());
+		
+		
+		
+	}
+
+}

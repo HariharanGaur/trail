@@ -1,0 +1,18 @@
+import java.util.*;
+public class Streamss {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> arr=new ArrayList<>();
+		arr.add(10);
+		arr.add(50);
+		arr.add(21);
+		arr.add(17);
+		arr.add(45);
+		System.out.println(arr+"\n----------");
+		
+		arr.stream().sorted((i,j)->i-j).forEach(i->System.out.print(i));
+
+	}
+
+}

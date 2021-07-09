@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Palindrom {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		int i=0;
+		for(i=0;i<s.length();i++)
+		{
+			if(Character.isDigit(s.charAt(i))) {
+				continue;
+			}
+			else {
+				System.out.println("The string is not integer");
+				break;
+			}
+		}
+		if(i==s.length()-1)
+			System.out.println("This is integer");
+		int j=0;
+		for(j=0;j<s.length()/2;j++)
+		{
+			if(s.charAt(j)==(s.charAt(s.length()-1-j)))
+				continue;
+			else
+			{
+				System.out.println("Not palindrome");
+			}
+		}
+		if(j==s.length()/2-1)
+			System.out.println("Panlindrome");
+
+	}
+
+}

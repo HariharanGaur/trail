@@ -1,0 +1,33 @@
+import java.util.*;
+
+class empenter{
+	int id,salary;
+	String city;
+	empenter(int id,int salary,String city){
+		this.city=city;
+		this.id=id;
+		this.salary=salary;
+	}
+}
+public class Employee2 {
+	public static void main(String[] args) {
+		ArrayList<empenter> arr=new ArrayList<empenter>();
+		arr.add(new empenter(101,1200,"Bangalore"));
+		arr.add(new empenter(103,1000,"Delhi"));
+		arr.add(new empenter(104,1200,"Bangalore"));
+		arr.add(new empenter(102,1500,"Mumbai"));
+		
+		System.out.println(arr);
+	}
+}
+
+class comparing implements Comparator{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		empenter emp1=(empenter) o1;
+		empenter emp2=(empenter) o2;
+		return 0;
+	}
+	
+}

@@ -1,0 +1,63 @@
+import java.time.Instant;
+import java.util.*;
+
+public class sets {
+
+	int id;
+	String name;
+
+	public sets(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public static void main(String[] args) {
+
+		/*
+		 * Set ts=new TreeSet<>(); for(int i=0;i<100;i++) ts.add(i);
+		 * 
+		 * System.out.println("Sequential stream"); System.out.println(Instant.now());
+		 * ts.stream().forEach(System.out::println); System.out.println(Instant.now());
+		 * 
+		 * System.out.println("Parallel stream");
+		 * ts.parallelStream().forEachOrdered(System.out::println);
+		 * System.out.println(Instant.now());
+		 * 
+		 * Set hs=new HashSet(); for(int i=65;i<=90;i++) { hs.add((char)i); }
+		 * System.out.println(hs);
+		 */
+		sets obj1 = new sets(1, "Adam");
+		sets obj2 = new sets(2, "User2");
+
+		Set<Type> s = new TreeSet<>();
+		s.add(new Type(new Integer(2)));
+		s.add(new Type(new Integer(1)));
+		s.add(new Type(obj2));
+		s.add(new Type(obj1));
+		s.add(new Type(new String("Hi")));
+		s.add(new Type(new String("Hello")));
+
+		s.stream().forEach(System.out::println);
+
+	}
+
+}
+
+class Type implements Comparable<Type> {
+
+	private Object object;
+
+	public Type(Object o) {
+		this.object = o;
+	}
+
+	@Override
+	public int compareTo(Type o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/*
+	 * @Override public String toString() { return "--" + object + "--"; }
+	 */
+}
